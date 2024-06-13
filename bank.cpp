@@ -200,8 +200,8 @@ public:
 };
 
 int main() {
-    BankAccount alice("Alice", 500);
-    BankAccount bob("Bob", 300);
+    BankAccount alice("Sender", 500);
+    BankAccount bob("Reciever", 300);
 
     double transferAmount = 500;
     Bank bank;
