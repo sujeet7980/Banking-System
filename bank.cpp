@@ -200,18 +200,18 @@ public:
 };
 
 int main() {
-    BankAccount alice("Sender", 500);
-    BankAccount bob("Reciever", 300);
+    BankAccount sender("Sender", 500);
+    BankAccount reciever("Reciever", 300);
 
     double transferAmount = 500;
     Bank bank;
 
     string transactionId = "txn123"; 
 
-    if (bank.transferMoney(alice, bob, transferAmount, transactionId)) {
+    if (bank.transferMoney(sender, reciever, transferAmount, transactionId)) {
         cout << "Final Balances:\n"
-             << "Alice: $" << alice.getBalance() << "\n"
-             << "Bob: $" << bob.getBalance() << endl;
+             << "Sender: $" << sender.getBalance() << "\n"
+             << "Reciever: $" << reciever.getBalance() << endl;
     } else {
         cout << "Transfer could not be completed. Please try again later." << endl;
     }
